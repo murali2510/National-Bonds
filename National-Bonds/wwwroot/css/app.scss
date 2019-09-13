@@ -1,0 +1,25 @@
+
+/*variables Font */
+@import 'scss/variables';
+
+/*Load mixin */
+@import 'scss/mixin';
+/*inheritance Font */
+@import 'scss/inheritance';
+/*Load Font */
+@import 'scss/font';
+
+/*common styles */
+@import 'scss/common';
+/*header styles */
+@import 'scss/header';
+/*banner styles */
+@import 'scss/banner';
+/*Custom styles */
+@import 'scss/pages';
+/*Custom styles */
+@import 'scss/custom';
+/*footer styles */
+@import 'scss/footer';
+/*themes styles */
+@import 'scss/themes';

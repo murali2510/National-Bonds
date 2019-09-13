@@ -1,0 +1,72 @@
+/*********** font ***********/
+@mixin font-face($familyname, $fname, $style, $weight: 300){
+    $filepath: "../../fonts/" + $familyname + "/" + $fname;
+    @font-face {    font-family: "#{$familyname}";
+                    src: url($filepath + ".eot");
+                    src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $familyname + "            ") format('svg');
+                    font-weight: $weight;
+                    font-style: $style
+                }
+}
+
+
+/******** Transition *********/
+@mixin transition($property, $duration, $function, $delay) 
+{
+ transition: $property $duration $function $delay;
+ -webkit-transition:$property $duration $function $delay;
+-moz-transition:$property $duration $function $delay;
+-o-transition:$property $duration $function $delay;
+ }
+
+/************* **************/
+@mixin gradient($direction, $from, $to) {
+    background: $to;
+    background: -moz-linear-gradient($direction, $from 0%, $to 100%);
+    background: -webkit-gradient(linear, $direction, color-stop(0%,$from), color-stop(100%,$to));
+    background: -webkit-linear-gradient($direction, $from 0%,$to 100%);
+    background: -o-linear-gradient($direction, $from 0%,$to 100%);
+    background: linear-gradient($direction, $from 0%,$to 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$from}, endColorstr=#{$to})
+}
+/************** Shadow ************/
+@mixin shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+/*********** radius ************/
+@mixin radius($radius:100%)
+{
+	-webkit-border-radius:$radius!important;
+	-ms-border-radius:$radius!important;
+	-moz-border-radius:$radius!important;
+	border-radius:$radius!important;
+}
+
+
+/******** Button *********/
+@mixin btnFormat($bgColor:$primaryColor,$bgColorHover:$primaryColor,$textColor:$blackColor,$fontSize:16px,$padding:12px 30px) {
+  background: $bgColor;
+  color:$textColor;
+  font-size: $fontSize;
+  margin: 0;
+  padding:$padding;
+  display: inline-block;
+  border:none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+     @include transition(all, 0.5s, ease, 0s);
+     &:hover {
+     background-color:rgba($bgColorHover,0.7);
+         @include transition(all, 0.5s, ease, 0s);
+  }
+}

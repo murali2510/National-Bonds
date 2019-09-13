@@ -1,0 +1,358 @@
+
+/*header
+{ 
+     
+    margin-bottom:-150px;
+    position:relative;
+    overflow:hidden;
+    z-index:2;
+    .topLinks
+    {
+        background-color:rgba($headerOverLayerColor,1);
+        color:$topLinkColor;
+        font-size:14px;
+        a
+        {
+            color:$topLinkColor; 
+            
+            @include transition(all, 0.5s, ease, 0s);
+            text-decoration: none;
+            &:hover{
+           
+               @include transition(all, 0.5s, ease, 0s);
+                color:$topLinkHoverActiveColor;
+            };
+        }
+        .leftSide
+        {
+            a
+            {
+                padding:7px 20px;
+                display: inline-block;
+                color:$topLinkColor;
+                @include transition(all, 0.5s, ease, 0s);
+                &:first-child
+                {
+                    padding-left: 0;
+                    border-right:#525151 solid 1px;
+                }
+                &:last-child
+                {
+                    padding-right:0;
+                }
+                .fa
+                {
+                    margin-right:5px;
+                    font-size:14px;
+                    color: $topIconColor;
+                    @include transition(all, 0.5s, ease, 0s);
+                }
+                &:hover
+                {
+                 
+                @include transition(all, 0.5s, ease, 0s);
+                color:$topLinkHoverActiveColor;
+                    .fa{
+                        @include transition(all, 0.5s, ease, 0s);
+                        color:$topLinkHoverActiveColor;
+                    }
+                }
+            }
+        }
+        .rightSide
+        {
+            text-align:right;
+            ul
+            {
+                margin:0;
+                padding: 0;
+                a
+                {    
+                    padding:7px 5px;
+                    display:inline-block;                   
+                    &:first-child{
+                        padding-left:0;
+                    }
+                    &:last-child{
+                        padding-right:0;
+                    }             
+                }
+            }
+        }
+    }
+   
+    .logoSection{
+        padding:20px 0;
+        background-color: rgba(255,255,255,0.5);
+        .logo{max-width: 200px}
+        .search-bar input[type="text"] 
+        {
+            width:170px;
+            box-sizing: border-box;
+            border: 1px solid #666666;
+            border-radius: 40px;
+            font-size: 16px;
+            background-color:rgba(255,255,255,0.7);
+            background-image: url(../images/search-icon.png);
+            background-position: center right;
+            background-repeat: no-repeat;
+            padding: 5px 20px 5px 20px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            float: right;
+            font-size: 14px;
+            color: #000;
+        }
+            .search-bar input[type=text]:focus 
+            {
+                width: 100%;
+                outline: none;
+            }
+            .cart-icon 
+            {
+                position: relative;
+                margin-left: 30px;            
+            }
+            .cart-icon .fa-shopping-cart {
+                font-size: 30px;
+                color: #121212;
+            }
+            .cart-icon .badge 
+            {
+                display: inline-block;
+                min-width: 0px;
+                padding: 4px 6px;
+                font-size: 10px;
+                font-weight: bold;
+                color: #fff;
+                line-height: 1;
+                vertical-align: middle;
+                white-space: nowrap;
+                text-align: center;
+                background-color: #ef0000;
+                border-radius: 26px;
+                border: 1px solid #fff;
+                position: absolute;
+                left: -14px;
+                right: auto;
+            }
+    }
+    .navLinks
+    {
+        background-color:rgba($navLinksBgColor,0.4);
+        padding:3px 0;
+        .navbar
+        {
+            padding-left:0;
+            padding-right:0;
+            display: block;
+            justify-content:space-between; 
+            .navbar-nav{
+                li
+                {
+                    a{
+                        color:$navLinksColor;
+                        font-size: 1.2rem;
+                        
+                        @include transition(all, 0.5s, ease, 0s);
+                        &:hover
+                        {
+                            color:$navLinksHoverColor;
+                           
+                            @include transition(all, 0.5s, ease, 0s);
+                        };
+                        &:last-child
+                        {
+                            padding-right:0;
+                            padding-left:40px;
+                        }
+                    };
+                    &.active
+                    {
+                        a
+                        {
+                            color:$navLinksHoverColor;  
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}
+header{ 
+    /*background-color:rgba($headerBgColor,0.9);
+    background-image:url("../../images/banner1.jpg");  
+    background-size: cover;
+    margin-bottom:60px;
+    position: relative;
+    overflow: hidden;
+    &:before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; 
+        background-color:rgba($headerOverLayerColor,0.9);
+    };
+   .tp-bgimg {
+        position: relative;
+        background-color: rgba($headerOverLayerColor,0.9);
+        &:before
+        {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          height: 2000px;
+          background-color: rgba($headerOverLayerColor,0.9); 		
+        }
+	}*/
+    /*
+    .topLinks
+    {
+        background-color:rgba($headerOverLayerColor,1);
+        color:$topLinkColor;
+        font-size:14px;
+        a
+        {
+            color:$topLinkColor;*/
+              /****  $property $duration $function $delay  ***/
+            /*@include transition(all, 0.5s, ease, 0s);
+            text-decoration: none;
+            &:hover{
+                  /****  $property $duration $function $delay  ***/
+               /* @include transition(all, 0.5s, ease, 0s);
+                color:$topLinkHoverActiveColor;
+            };
+        }
+        .leftSide
+        {
+            a
+            {
+                padding:7px 20px;
+                display: inline-block;
+                color:$topLinkColor;
+                @include transition(all, 0.5s, ease, 0s);
+                &:first-child
+                {
+                    padding-left: 0;
+                    border-right:$navLinksBgColor solid 1px;
+                }
+                &:last-child
+                {
+                    padding-right:0;
+                }
+                .fa
+                {
+                    margin-right:5px;
+                    font-size:14px;
+                    color: $topIconColor;
+                    @include transition(all, 0.5s, ease, 0s);
+                }
+                &:hover{
+                  /****  $property $duration $function $delay  ***/
+               /* @include transition(all, 0.5s, ease, 0s);
+                color:$topLinkHoverActiveColor;
+                    .fa{
+                        @include transition(all, 0.5s, ease, 0s);
+                        color:$topLinkHoverActiveColor;
+                    }
+            };
+        }
+    }
+    .rightSide{
+         text-align:right;
+        a{    
+            padding:7px 0px;
+            display:inline-block;                   
+            &:first-child{
+                padding-left:0;
+            }
+            &:last-child{
+                padding-right:0;
+            }             
+        }
+        .search
+         {
+            width:100%;
+            min-width:320px;
+            max-width:320px;
+            margin-right:20px;            
+            input
+                {
+                 height:36px;
+                 border:none;
+                 background-color:rgba($topSearchInputBgColor,0.1);
+                 color:$topSearchInputTextColor;
+                 padding:0 50px 0 15px; 
+                 width: 100%;
+                 width: -webkit-calc(100% - 40px);
+                 width: -moz-calc(100% - 40px);
+                 width: calc(100% - 40px);
+                }
+            button
+            {    
+                 background-color:$topSearchBtnBgColor;
+                 border:none;
+                 height:36px;
+                 cursor:pointer;
+                 position:absolute;
+                 color:$topSearchBtnTextColor;
+                 right:0;
+                 top:0;
+                 width:40px;
+                   /****  $property $duration $function $delay  ***/
+               /* @include transition(all, 0.5s, ease, 0s);
+                 .fa{
+                     color:$topSearchBtnTextColor;
+                     font-size:18px;
+                         @include transition(all, 0.5s, ease, 0s);
+                     transform: scale(1)
+                    }
+                   &:hover
+                    {
+                          /****  $property $duration $function $delay  ***/
+                       /* @include transition(all, 0.5s, ease, 0s);
+                        background-color:$topSearchBtnBgHoverColor;
+                        color:$topSearchBtnTextHoverColor;
+                        .fa{
+                                 @include transition(all, 0.5s, ease, 0s); 
+                            transform: scale(1.3)
+                            }
+                    };
+             }
+        }
+    }
+} 
+
+ }
+@media screen and (max-width:990px)
+{
+    header
+    {
+        margin-bottom: 30px; 
+        padding-bottom:50px;
+        height: auto;
+    }
+     
+}
+header#internal-page{
+    height:auto;
+    min-height: 0; 
+    background:none;
+    margin-bottom:0px;
+     &:before
+    {        
+        display:none;       
+    };
+    .navLinks{
+     background-color:rgba($headerBgColor,1);
+    };
+   
+  }
+*/

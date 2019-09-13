@@ -1,0 +1,117 @@
+﻿<style>
+    button:disabled:hover {
+        cursor: not-allowed;
+    }
+</style>
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<link href="~/css/app.css" rel="stylesheet" />
+<link href="~/css/font-awesome.css" rel="stylesheet" />
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+<style>
+    button:disabled:hover {
+        cursor: not-allowed;
+    }
+</style>
+<body>
+    <section id="loginPage">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-5 leftContentOuter p-0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-9 offset-md-3 heading">
+                                <h4>Welcome to e-Nbc</h4>
+                                <p>Enter your username and password below to proceed</p>
+                            </div>
+                            <div class="col-sm-12 col-md-9 offset-md-3 leftContent">
+                                <h2>Sign up<span>Sign Up</span></h2>
+                                <p>If you are an existing National Bond Account holder, click below to create your log in ID and password</p>
+                                <button class="nb-btn">NBC Customer</button>
+                                <p>Register below to experience the convenience of NBC Online.</p>
+                                <button class="nb-btn">New to NBC</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-7 rightContentOuter p-0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-9 rightContent">
+                                <img src="~/images/u72.png" alt="DubaiID" />
+                                <p>DubaiID enables customers to have one single sign-on to all the eServices provided by Dubai Goverment entities and interact with them using one account only. Please login with your DubaiID by clicking here to pull your Emirates Id details</p>
+                                <button class="nb-btn">Sign In</button>
+                                <div class="loginFrm">
+                                    <h3>Sign In<span>Sign In</span></h3>
+
+
+
+                                    <div class="loginFrom">
+                                        <form id="contact-form" class="form" action="#" method="POST" role="form">
+                                            <div class="form-group">
+                                                <label class="form-label" for="name">Username</label>
+                                                <input type="text" class="form-control" id="name" name="name" onkeyup="loginValidations()" placeholder="Enter your login ID" tabindex="1" required>
+                                            </div>
+                                            <div class="form-group pswd">
+                                                <label class="form-label" for="email">Password</label>
+                                                <input type="password" class="form-control" id="password" onkeyup="loginValidations()" name="password" placeholder="Enter your password" tabindex="2" required />
+                                                <i id="password-field" class="fa fa-eye-slash" onclick="toggleEyeIcon()"></i>
+
+                                            </div>
+                                            <div class="d-flex justify-content-between">
+                                                <div>
+
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input"  id="materialLoginFormRemember">
+                                                        <label class="form-check-label text-secondary" for="materialLoginFormRemember">Remember me</label>
+                                                    </div>
+                                                </div>
+                                                <div>
+
+                                                    <a href="" class="text-secondary" style="text-decoration: underline;">Forgot password?</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-left">
+                                                <button type="submit" id="submitbtn" class="nb-btn"  disabled>Sign in</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    function loginValidations() {
+        var submitButton = document.getElementById("submitbtn");
+        if ($("#Username").val() != "" && $("#password").val() != "") {
+            $("#submitbtn").attr("disabled", false);
+        }
+        else
+       {
+           submitButton.disabled = true;
+       }
+    }
+    function toggleEyeIcon() {
+        if ($("#password-field").hasClass("fa fa-eye-slash") == true) {
+            $("#password").attr("type", "text");
+            $("#password-field").removeClass("fa fa-eye-slash");
+            $("#password-field").addClass("fa fa-eye");
+        }
+        else if ($("#password-field").hasClass("fa fa-eye") == true) {
+            $("#password").attr("type", "password");
+            $("#password-field").removeClass("fa fa-eye");
+            $("#password-field").addClass("fa fa-eye-slash");
+        }
+    }
+</script>
